@@ -45,7 +45,7 @@ public class GuessingGame {
         System.out.printf("I'm thinking of a number between 1 and %d...\n", MAX_NUMBER);
         do {
             guessesCount++;
-            System.out.println("Your guess?");
+            System.out.print("Your guess? ");
         } while(!isAns(answer, scanner.nextInt())); // compare the guess with answer
         System.out.printf("You got it right in %d guesses.\n", guessesCount); // show score
         return guessesCount;
@@ -75,10 +75,11 @@ public class GuessingGame {
      */
     public static void showIntro() {
         System.out.printf("This program allows you to play a guessing game.\n");
-        System.out.printf("I will think of a number between 1 and ");
-        System.out.printf("%d and will allow you to guess until you get it.\n", MAX_NUMBER);
-        System.out.printf("For each guess, I will tell you whether the right answer ");
-        System.out.printf( "is higher or lower than your guess.\n");
+        System.out.printf("I will think of a number between 1 and\n");
+        System.out.printf("%d and will allow you to guess until\n", MAX_NUMBER);
+        System.out.printf("you get it. For each guess, I will tell you\n");
+        System.out.printf( "whether the right answer is higher or lower\n");
+        System.out.printf( "than your guess.\n\n");
     }
 
     /**
@@ -91,10 +92,10 @@ public class GuessingGame {
     public static void showSummary(int gamesPlayed, int sumScore, int bestScore) {
         double avgScore = sumScore/gamesPlayed;
         System.out.println("Overall scores: ");
-        System.out.printf("total games: %d\n", gamesPlayed);
-        System.out.printf("total guesses: %d\n", sumScore);
-        System.out.printf("guesses/game: %.2f\n", avgScore);
-        System.out.printf("best game: %d", bestScore);
+        System.out.printf("\t%-15s= %d\n", "total games", gamesPlayed);
+        System.out.printf("\t%-15s= %d\n", "total guesses", sumScore);
+        System.out.printf("\t%-15s= %.2f\n", "guesses/game", avgScore);
+        System.out.printf("\t%-15s= %d", "best game", bestScore);
     }
 
     /**
