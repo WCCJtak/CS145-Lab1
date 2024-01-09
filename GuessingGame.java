@@ -48,7 +48,7 @@ public class GuessingGame {
         do {
             guessesCount++;
             System.out.println("Your guess?");
-        } while(!isEqual(answer, scanner.nextInt())); // compare the guess with answer
+        } while(!isAns(answer, scanner.nextInt())); // compare the guess with answer
         System.out.printf("You got it right in %d guesses.\n", guessesCount); // show score
         return guessesCount;
     }
@@ -57,14 +57,14 @@ public class GuessingGame {
      * Returns True if the value is equal.
      * Also prints out if the num2 is higher or lower than num1 if they are not equal.
      * 
-     * @param num1
-     * @param num2
+     * @param ans answer
+     * @param atmpt attempt
      * @return boolean 
      */
-    public static boolean isEqual(int num1, int num2) {
-        if (num1 == num2){
+    public static boolean isAns(int ans, int atmt) {
+        if (ans == atmt){
             return true;
-        } else if ((num1 > num2)) {
+        } else if ((ans > atmt)) {
             System.out.println("It's higher.");
         } else { // num1 < num2
             System.out.println("It's lower.");

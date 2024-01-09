@@ -31,8 +31,10 @@ public static void help()
 public static void summary()
 
 // compare two scores
-// Returns true if the score2 is better than score1.
 public static boolean isBetterScore(int score1, int score2)
+// returns true if the score2 is better than score1.
 
-// Returns true if given integers are equal
-public static boolean isEqual(int num1, int num2)
+// compares an attempt with answer
+public static boolean isAns(int ans, int atmt)
+// returns true if given integers are equal or false
+// also prints if the value is bigger or smaller
