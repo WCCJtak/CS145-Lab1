@@ -1,6 +1,6 @@
 /** 
  * @Author: JeongGyu Tak
- * @Date 240901
+ * @Date 240108
  * @Class: CS&145
  * @Assignment: LAB#1
  * @Purpose: Playing GuessingGame

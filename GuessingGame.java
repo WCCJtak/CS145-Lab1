@@ -4,7 +4,7 @@ import java.util.Scanner;
 /** 
  * GuessingGame.class
  * @Author: JeongGyu Tak, Same Clarke, Nick Ivancovich
- * @Date: 240901
+ * @Date: 240109
  * @Class: CS&145
  * @Assignment: LAB#1
  * @Purpose: To generate a guessing game using java.util.Random.
@@ -22,12 +22,10 @@ public class GuessingGame {
         int sumScore = 0;
         int bestScore = Integer.MAX_VALUE; // initialize with max attempt
         showIntro();
-        do { // post-condition - L:34.
+        do {
             gamesPlayed++;
             int score = playGame(scanner);
-            if (isBetterScore(bestScore, score)) { // The lower the better.
-                bestScore = score; // Update the best score.
-            }
+            if (isBetterScore(bestScore, score)) bestScore = score;
             sumScore += score;
         } while (playAgain(scanner)); // break if user does not want to play again.
         showSummary(gamesPlayed, sumScore, bestScore);
@@ -54,8 +52,8 @@ public class GuessingGame {
     }
 
     /**
-     * Returns True if the value is equal.
-     * Also prints out if the num2 is higher or lower than num1 if they are not equal.
+     * Returns True if the values are equal.
+     * Also prints out if the attempt is higher or lower than the answer.
      * 
      * @param ans answer
      * @param atmpt attempt
@@ -66,7 +64,7 @@ public class GuessingGame {
             return true;
         } else if ((ans > atmt)) {
             System.out.println("It's higher.");
-        } else { // num1 < num2
+        } else { // answer < attempt
             System.out.println("It's lower.");
         }
         return false;
