@@ -41,8 +41,8 @@ public class GuessingGame {
     public static int playGame(Scanner scanner) {
         Random random = new Random();
         int guessesCount = 0;
-        int answer = random.nextInt(MAX_NUMBER);
-        System.out.println("I'm thinking of a number between 1 and 100...");
+        int answer = random.nextInt(MAX_NUMBER - 1) + 1; // nextInt includes zero.
+        System.out.printf("I'm thinking of a number between 1 and %d...\n", MAX_NUMBER);
         do {
             guessesCount++;
             System.out.println("Your guess?");
@@ -74,13 +74,11 @@ public class GuessingGame {
      * Prints Intro of guessing game.
      */
     public static void showIntro() {
-        System.out.println("This program allows you to play a guessing game.\n"
-                        + "I will think of a number between 1 and\n"
-                        + "100 and will allow you to guess until\n"
-                        + "you get it. For each guess, I will tell you\n"
-                        + "whether the right answer is higher or lower\n"
-                        + "than your guess.");
-
+        System.out.printf("This program allows you to play a guessing game.\n");
+        System.out.printf("I will think of a number between 1 and ");
+        System.out.printf("%d and will allow you to guess until you get it.\n", MAX_NUMBER);
+        System.out.printf("For each guess, I will tell you whether the right answer ");
+        System.out.printf( "is higher or lower than your guess.\n");
     }
 
     /**
