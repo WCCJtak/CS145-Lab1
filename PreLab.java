@@ -1,9 +1,9 @@
-/**
- * CS&145
- * 08/01/2023
- * Lab 1
- * 
- * Guessing Game
+/** 
+ * @Author: JeongGyu Tak
+ * @Date 240901
+ * @Class: CS&145
+ * @Assignment: LAB#1
+ * @Purpose: Playing GuessingGame
  */
 
 // the main function
